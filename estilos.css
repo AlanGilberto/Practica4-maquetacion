@@ -1,0 +1,82 @@
+body{
+    min-height: 100vh;
+    display: grid;
+    grid-template-areas: "header header"
+                         "nav nav"
+                         "sidebar maincontent"
+                         "footer footer";
+                         gap: 0.5em;
+    grid-template-columns: 48% 48%;
+    grid-template-rows: 300px 50px 600px 200px;
+    place-content: center;
+    font-family: sans-serif;
+}
+header{
+grid-area: header;
+background-image:linear-gradient(120deg, #a1c4fd73 0%, #c2e9fb7e 100%), url(imagenes/bg-header.jpg);
+background-size: cover;
+background-position: center;
+display: grid;
+place-content: center;
+font-size: 40px;
+color: #fff;
+text-shadow: 11px 6px 6px #000;;
+}
+nav{
+grid-area: nav;
+background-color: blueviolet;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+nav a{
+    color: #fff;
+    margin-left: 10px;
+    text-decoration: none;
+}
+nav a:hover{
+text-decoration: underline;
+font-weight: bold;
+}
+.sidebar{
+grid-area: sidebar;
+background-color: chocolate;
+background-image: url(imagenes/sidebar.png);
+background-position: center;
+background-size: cover;
+}
+.main-content{
+grid-area: maincontent;
+background-image: linear-gradient(
+55deg, rgb(228, 29, 123), rgb(125, 50, 189));
+color: #fff;
+padding: 50px 30px 50px 30px;
+
+}
+article{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    height: 50%;;
+}
+footer{
+grid-area: footer;
+background-color: #26223F;
+}
+.informacion{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.informacion P{
+    font-weight: bold;
+    font-size: 20px;
+    color: #fff;
+}
+.informacion a {
+    display: block;
+    color: rgb(218, 218, 218);
+    margin: 5px;
+}
